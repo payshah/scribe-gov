@@ -1,4 +1,4 @@
-TowTapp
+Scribe
 =====================
 
 
@@ -6,7 +6,7 @@ TowTapp
 
 The MIT License (MIT)
 
-Copyright (c) 2016 BridgeVision (Possible name of new company)
+Copyright (c) 2016 Scribe
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
