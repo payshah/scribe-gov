@@ -1,0 +1,19 @@
+.tooltip{
+   position: absolute;
+   top: 0px;
+   left: 125px;
+}
+
+.tooltip:hover:after {
+  content: attr(title);
+  position: absolute;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 3px 7px; color: #FFF;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin-right:0px;
+  margin-top:-20px;
+  z-index: 1;
+}

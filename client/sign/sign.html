@@ -1,0 +1,24 @@
+<template name="sigpad">
+  <h2>sigpad</h2>
+
+  {{#autoForm id="sigpad-id" doc=step.data schema=step.schema}}
+
+    {{> afQuickField id="nothingForm" template="nothing" }}
+
+    {{> wizardButtons}} /* this will render back, next and confirm buttons */
+
+  {{/autoForm}}
+</template>
+
+<template name="afQuickField_nothing">
+  <div id="signature-pad" class="m-signature-pad">
+     <div class="m-signature-pad--body">
+       <canvas></canvas>
+     </div>
+     <div class="m-signature-pad--footer">
+       <div class="description">Sign above</div>
+       <button class="button clear" data-action="clear">Clear</button>
+       <button class="button save" data-action="save">Save</button>
+     </div>
+   </div>
+</template>

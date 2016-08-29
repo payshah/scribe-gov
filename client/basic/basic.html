@@ -1,0 +1,276 @@
+<template name="basic">
+  {{> wizard id="basic" route="basic" steps=steps stepsTemplate="steps_semanticUI" buttonClasses="ui button"}}
+
+</template>
+
+<template name="viewLead">
+  <p>Thank you for filling out the form. We will be in touch shortly.</p>
+
+  <!-- <a href="/" class="ui button">Get another lead</a> -->
+</template>
+
+<template name="applicant">
+  <form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <i title="can add toolips to sections"  class="app-tooltip help circle icon"></i>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" placeholder="First Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Middle Intial</label>
+    <div class="field">
+      <div class="four wide field">
+        <input type="text" name="shipping[address]" placeholder="Middle Initial">
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Last Name</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Last Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Age</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Age">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Date of Birth</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="DOB">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>SSN</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="SSN">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Height</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Height">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Weight</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Weight">
+      </div>
+    </div>
+  </div>
+  <div style="margin:1em;" class="grouped fields">
+        <label for="fruit">Purpose of Examination:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
+            <label>Enlistment</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" tabindex="0" class="hidden">
+            <label>Commission</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" tabindex="0" class="hidden">
+            <label>Retention</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" tabindex="0" class="hidden">
+            <label>U.S. Service Academy</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" tabindex="0" class="hidden">
+            <label>ROTC Scholarship</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" tabindex="0" class="hidden">
+            <label>Other</label>
+          </div>
+        </div>
+      </div>
+</form>
+  {{#autoForm id="applicant-id" doc=step.data schema=step.schema}}
+
+
+    {{> wizardButtons}}
+
+  {{/autoForm}}
+</template>
+
+
+<template name="authorization">
+
+<div class="ui bulleted list">
+  <h2 style="color:red;">Stop and read: The following statments apply to signatures in this section</h2>
+  <div style="font-weight: bold;" class="item">I (we) , the undersigned:</div>
+  <div class="item">Certify the information on this form is true and complete to the best of my knowledge and belief, and no person has advised me
+to conceal or falsify any information about my physical and mental history</div>
+  <div class="item">Authorize and understand that a physical examination is part of the accession evaluation, may require several visits to the Military
+Entrance Processing Station (MEPS), and that I will have blood work and/or other medical tests, procedures and/or specialty
+consultations performed as part of my processing. I understand that the results of the examination, tests, and consults will be
+reviewed and considered as part of my application file and are not performed as part of an individual healthcare treatment plan.
+The MEPS medical staff are not my healthcare providers. If I do not receive notice of an abnormal test or consult, I am not to
+assume that the results are normal. Furthermore, if any test or consult results are abnormal, I am responsible for obtaining those
+results from the MEPS and for any necessary follow-up evaluations and/or treatment. If I am notified to return to the MEPS to
+discuss medical results, it is my responsibility to take quick action to return to the MEPS to speak with the Chief Medical Officer
+(CMO). Any concerns that I have about my health and healthcare are my responsibility to address with my personal healthcare
+provider(s). </div>
+<div class="item">Understand this authorization will expire two years from the date of the signature below or sooner if written request is received by
+USMEPCOM Staff Judge Advocate’s Office. I have the right to revoke this authorization in writing, except to the extent that the
+DoD has acted in reliance on this information. </div>
+
+</div>
+
+  {{#autoForm id="authorization-id" doc=step.data schema=step.schema}}
+
+
+    {{> afQuickField name="Terms"}}
+     {{> afQuickField name="name" leftIcon="empty circle" rightLabel="Sign Here"}}
+
+    {{> wizardButtons}}
+
+  {{/autoForm}}
+</template>
+
+<template name="contact">
+  <form class="ui form">
+  <h4 class="ui dividing header">Primary Physician</h4>
+  <i title="can add toolips to sections"  class="tooltip help circle icon"></i>
+  <div class="field">
+    <label>Name</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" placeholder="Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Address</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Address">
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Phone</label>
+    <div class="field">
+      <div class="four wide field">
+        <input type="text" name="shipping[address]" placeholder="Phone">
+      </div>
+    </div>
+  </div>
+  <h4 class="ui dividing header">Insurance Provider</h4>
+  <div class="field">
+    <label>Name</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" placeholder="Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Address</label>
+    <div class="field">
+      <div class="field">
+        <input type="text" name="shipping[address]" placeholder="Address">
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:1em;" class="field">
+    <label>Phone</label>
+    <div class="field">
+      <div class="four wide field">
+        <input type="text" name="shipping[address]" placeholder="Phone">
+      </div>
+    </div>
+  </div>
+</form>
+{{#autoForm id="contact-id" doc=step.data schema=step.schema}}
+
+
+  {{> wizardButtons}}
+
+{{/autoForm}}
+</template>
+
+<template name="review">
+  <form class="ui form">
+  <h4 class="ui dividing header">Applicant Section</h4>
+  <i title="can add toolips to sections"  class="tooltip help circle icon"></i>
+  <div class="field">
+    <label>Name: John Smith</label>
+    <label>Age: 20</label>
+    <label>DOB: 01/20/1996</label>
+    <label>SSN: 111-111-1111</label>
+    <label>Height: 5'10</label>
+    <label>Weight: 195 lbs</label>
+    <label>Purpose of examination: Enlistment</label>
+  </div>
+  <h4 class="ui dividing header">Medical History</h4>
+  <i title="can add toolips to sections"  class="tooltip help circle icon"></i>
+  <div class="field">
+    <label>Double Vision: Yes</label>
+  </div>
+  <h4 class="ui dividing header">Applicant Comments</h4>
+  <i title="can add toolips to sections"  class="tooltip help circle icon"></i>
+  <div class="field">
+    <label>Comment:  Blunt injury to the cheek from a car accident resulted in a blow-out fracture of the orbit with hematoma</label>
+  </div>
+  <h4 class="ui dividing header">HealthCare and Insurance</h4>
+  <i title="can add toolips to sections"  class="tooltip help circle icon"></i>
+  <div class="field">
+    <label style="font-weight:bold;">Primary Physician:</label>
+    <label>Dr. Shefali K. Shah, MD</label>
+    <label>2623 N Halsted St, Chicago, IL 60614</label>
+    <label>(773) 929-7410</label>
+  </div>
+  <div class="field">
+    <label style="font-weight:bold;">Insurance Provider:</label>
+    <label>Blue Cross and Blue Shield</label>
+    <label>1001 E. Lookout Drive, Richardson, TX 75082</label>
+    <label>(800)-451-0287</label>
+  </div>
+  <h4  class="ui dividing header">Authorization</h4>
+  <div style="margin-bottom:1em;" class="field">
+  <label>Applicant has confirmed that he/she has read all terms and conditions and has signed</label>
+  </div>
+</form>
+  {{#autoForm id="review-id" doc=step.data schema=step.schema}}
+
+
+    {{> wizardButtons}}
+
+  {{/autoForm}}
+
+</template>
